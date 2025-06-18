@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background: linear-gradient(140deg, gold, black);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.to-do {
+    width: 400px;
+    height: 45vh;
+    background-color: #fff;
+    align-items: center;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.to-do h1 {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.tasks {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 30px;
+    background: beige;
+    margin-bottom: 20px;
+    padding-left: 15px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 10px;
+}
+
+button {
+
+    border: none;
+    outline: none;
+    padding: 12px 50px;
+    color: #ffff;
+    background: #ff5945;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 32px;
+}
+
+ul li {
+    list-style: none;
+    padding: 12px 18px 10px 50px;
+    user-select: none;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before {
+    content: '';
+    height: 20px;
+    width: 20px;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: absolute;
+    /* background: url(https://unsplash.com/photos/blue-jellyfish-floating-in-the-black-abyss-NDQbSIBQEi0); */
+    background-position: center;
+    background-size: cover;
+    top: 11px;
+    left: 8px;
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+
+        content: '✓';
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        color: white;
+        background-color: #4caf50;
+        border-color: #4caf50;
+    
+}
+
+ul li span {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    height: 40px;
+    width: 40px;
+    font-size: 21px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover {
+    background-color: pink;
+}
